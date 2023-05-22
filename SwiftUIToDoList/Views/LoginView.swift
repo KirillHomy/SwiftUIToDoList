@@ -15,46 +15,50 @@ struct LoginView: View {
 
     // MARK: - Boby
     var body: some View {
-        VStack {
-            // MARK: - Header
-            HeaderView()
-            // MARK: - Login form
+        NavigationView {
             VStack {
-                TextField("Email Address", text: $email)
-                    .textFieldStyle(CustomTextFieldStyle())
-                SecureField("Password", text: $password)
-                    .textFieldStyle(CustomTextFieldStyle())
-                Button {
-                    //
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10.0)
-                            .foregroundColor(.orange)
-                        Text("Log In")
-                            .bold()
-                            .foregroundColor(.white)
+                // MARK: - Header
+                HeaderView(title: "To Do List",
+                           subTitle: " Get things done",
+                           angel: 15.0,
+                           color: .orange,
+                           isNavigation: true)
+
+                // MARK: - Login form
+                VStack {
+                    TextField("Email Address", text: $email)
+                        .textFieldStyle(CustomTextFieldStyle())
+                    SecureField("Password", text: $password)
+                        .textFieldStyle(CustomTextFieldStyle())
+                    Button {
+                        //
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10.0)
+                                .foregroundColor(.orange)
+                            Text("Log In")
+                                .bold()
+                                .foregroundColor(.white)
+                        }
                     }
+                    .frame(height: 50.0)
                 }
-                .frame(height: 50.0)
-            }
-            .frame(width: UIScreen.main.bounds.width - 32.0)
+                .frame(width: UIScreen.main.bounds.width - 32.0)
 
-            Spacer()
-            // MARK: - Create Account
-            VStack {
-                Text("New around here?")
-                    .foregroundColor(.white)
-                Button(action: {
-                    // Show registration
-                }) {
-                    Text("Create An Account")
-                        .foregroundColor(.black)
+                Spacer()
+                // MARK: - Create Account
+                VStack {
+                    Text("New around here?")
+                        .foregroundColor(.white)
+                    NavigationLink("Create An Account",
+                                   destination: RegisterView())
+                    .foregroundColor(.black)
+                    .padding(.bottom, 50.0)
                 }
-                .padding(.bottom, 50.0)
-            }
 
+            }
+            .background(.gray)
         }
-        .background(.gray)
     }
 
 }
