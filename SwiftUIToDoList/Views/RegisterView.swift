@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct RegisterView: View {
+
+    // MARK: - @State
+    @State var name = ""
+    @State var email = ""
+    @State var password = ""
+
     var body: some View {
         VStack {
             // MARK: - Header
@@ -16,6 +22,28 @@ struct RegisterView: View {
                        angel: -15.0,
                        color: .yellow,
                        isNavigation: false)
+            VStack {
+                // Name
+                TextField("Full Name", text: $name)
+                    .textFieldStyle(CustomTextFieldStyle())
+                    .autocorrectionDisabled()
+                // Mail
+                TextField("Email Address", text: $email)
+                    .textFieldStyle(CustomTextFieldStyle())
+                    .autocapitalization(.none)
+                    .autocorrectionDisabled()
+                // Password
+                SecureField("Password", text: $password)
+                    .textFieldStyle(CustomTextFieldStyle())
+                // Button
+                CustomButton(text: "Register", backgroundColor: .green) {
+                    // Action
+                }
+
+            }
+            .frame(width: UIScreen.main.bounds.width - 32.0)
+            .offset(y: -50.0)
+
             Spacer()
         }
         .background(.gray)
