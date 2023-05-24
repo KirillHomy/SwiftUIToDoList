@@ -32,7 +32,14 @@ struct LoginView: View {
                         .textFieldStyle(CustomTextFieldStyle())
                     CustomButton(text: "Log In",
                                  backgroundColor: .orange) {
-                        // Action
+                        loginViewModel.setLogin()
+                    }
+                    if loginViewModel.errorMessage.isNotEmpty() {
+                        Text(loginViewModel.errorMessage)
+                            .padding()
+                            .foregroundColor(.red)
+                            .background(Color.black)
+                            .cornerRadius(10.0)
                     }
                 }
                 .frame(width: UIScreen.main.bounds.width - 32.0)
