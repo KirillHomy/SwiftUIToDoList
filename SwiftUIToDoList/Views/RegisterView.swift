@@ -9,10 +9,8 @@ import SwiftUI
 
 struct RegisterView: View {
 
-    // MARK: - @State
-    @State var name = ""
-    @State var email = ""
-    @State var password = ""
+    // MARK: - ObservedObject
+    @StateObject var registerViewModel = RegisterViewModel()
 
     var body: some View {
         VStack {
@@ -24,20 +22,20 @@ struct RegisterView: View {
                        isNavigation: false)
             VStack {
                 // Name
-                TextField("Full Name", text: $name)
+                TextField("Full Name", text: $registerViewModel.name)
                     .textFieldStyle(CustomTextFieldStyle())
                     .autocorrectionDisabled()
                 // Mail
-                TextField("Email Address", text: $email)
+                TextField("Email Address", text: $registerViewModel.email)
                     .textFieldStyle(CustomTextFieldStyle())
                     .autocapitalization(.none)
                     .autocorrectionDisabled()
                 // Password
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $registerViewModel.password)
                     .textFieldStyle(CustomTextFieldStyle())
                 // Button
                 CustomButton(text: "Register", backgroundColor: .green) {
-                    // Action
+                    registerViewModel.registration()
                 }
 
             }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F2669E22A1D2EEE006ADDF9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2669E12A1D2EEE006ADDF9 /* CustomButton.swift */; };
 		7F2669F32A1E876E006ADDF9 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2669F22A1E876E006ADDF9 /* String+Ext.swift */; };
+		7F2669FE2A1FCF77006ADDF9 /* Encodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2669FD2A1FCF77006ADDF9 /* Encodable+Ext.swift */; };
 		7FC461A72A1A53B8007A9395 /* SwiftUIToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC461A62A1A53B8007A9395 /* SwiftUIToDoListApp.swift */; };
 		7FC461A92A1A53B8007A9395 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC461A82A1A53B8007A9395 /* MainView.swift */; };
 		7FC461AB2A1A53B9007A9395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FC461AA2A1A53B9007A9395 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		7F2669E12A1D2EEE006ADDF9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		7F2669F22A1E876E006ADDF9 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		7F2669FD2A1FCF77006ADDF9 /* Encodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Ext.swift"; sourceTree = "<group>"; };
 		7FC461A32A1A53B8007A9395 /* SwiftUIToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC461A62A1A53B8007A9395 /* SwiftUIToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIToDoListApp.swift; sourceTree = "<group>"; };
 		7FC461A82A1A53B8007A9395 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				7F2669F22A1E876E006ADDF9 /* String+Ext.swift */,
+				7F2669FD2A1FCF77006ADDF9 /* Encodable+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				7FC461D02A1A5961007A9395 /* ToDoListItemModel.swift in Sources */,
 				7FC461E02A1A5CF2007A9395 /* HeaderView.swift in Sources */,
 				7FC461C82A1A5902007A9395 /* LoginView.swift in Sources */,
+				7F2669FE2A1FCF77006ADDF9 /* Encodable+Ext.swift in Sources */,
 				7FC461A92A1A53B8007A9395 /* MainView.swift in Sources */,
 				7F2669E22A1D2EEE006ADDF9 /* CustomButton.swift in Sources */,
 				7FC461DC2A1A59E7007A9395 /* RegisterViewModel.swift in Sources */,

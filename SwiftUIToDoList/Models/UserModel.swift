@@ -7,14 +7,9 @@
 
 import SwiftUI
 
-struct UserModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct UserModel_Previews: PreviewProvider {
-    static var previews: some View {
-        UserModel()
-    }
+struct UserModel: Codable {
+    let id: String
+    let name: String
+    let email: String
+    let joined: TimeInterval
 }
