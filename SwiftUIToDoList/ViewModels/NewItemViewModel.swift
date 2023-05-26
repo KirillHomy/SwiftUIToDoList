@@ -7,14 +7,9 @@
 
 import SwiftUI
 
-struct NewItemViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+class NewItemViewModel: ObservableObject {
 
-struct NewItemViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        NewItemViewModel()
-    }
+    // MARK: - Init
+    init() {}
+
 }

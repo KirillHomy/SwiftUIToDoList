@@ -10,17 +10,25 @@ import FirebaseAuth
 
 class LoginViewModel: ObservableObject {
 
+    // MARK: - Published
     @Published var email = ""
     @Published var password = ""
     @Published var errorMessage = ""
 
+    // MARK: - Init
     init() {}
 
+    // MARK: - External Method
     func setLogin() {
         guard validateEnter() else { return }
 
         Auth.auth().signIn(withEmail: email, password: password)
     }
+
+}
+
+// MARK: - private extension
+private extension LoginViewModel {
 
     func validateEnter() -> Bool {
         errorMessage = ""

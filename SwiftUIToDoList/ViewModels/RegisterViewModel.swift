@@ -16,8 +16,10 @@ class RegisterViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
 
+    // MARK: - Init
     init() {}
 
+    // MARK: - External Method
     func registration() {
         guard validateRegistration() else { return }
 

@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct ProfileView: View {
+
+    // MARK: - StateObject
+    @StateObject var profileViewModel = ProfileViewModel()
+
+    // MARK: - Boby
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                
+            }
+            .navigationTitle("Profile")
+        }
     }
 }
 
+// MARK: - PreviewProvider
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()

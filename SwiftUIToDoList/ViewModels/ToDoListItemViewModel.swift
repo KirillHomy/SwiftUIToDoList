@@ -7,14 +7,9 @@
 
 import SwiftUI
 
-struct ToDoListItemViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+class ToDoListItemViewModel: ObservableObject {
 
-struct ToDoListItemViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        ToDoListItemViewModel()
-    }
+    // MARK: - Init
+    init() {}
+
 }

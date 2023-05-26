@@ -14,6 +14,7 @@ class MainViewModel: ObservableObject {
     @Published var currentUserId = ""
     private var handler: AuthStateDidChangeListenerHandle?
 
+    // MARK: - Init
     init() {
         self.handler = Auth.auth().addStateDidChangeListener { [weak self] _, user in
             guard let sSelf = self,
@@ -25,7 +26,8 @@ class MainViewModel: ObservableObject {
         }
     }
 
-    var isSignedIn: Bool {
+    // MARK: - External Method
+    func isSignedIn() -> Bool {
         return Auth.auth().currentUser != nil
     }
 

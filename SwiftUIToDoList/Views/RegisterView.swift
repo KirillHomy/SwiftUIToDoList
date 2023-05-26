@@ -12,6 +12,7 @@ struct RegisterView: View {
     // MARK: - ObservedObject
     @StateObject var registerViewModel = RegisterViewModel()
 
+    // MARK: - Boby
     var body: some View {
         VStack {
             // MARK: - Header
@@ -49,6 +50,7 @@ struct RegisterView: View {
     }
 }
 
+// MARK: - PreviewProvider
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView()

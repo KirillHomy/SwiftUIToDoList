@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ToDoListItemModel: View {
+
+    // MARK: - Body
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
+
 }
 
+// MARK: - PreviewProvider
 struct ToDoListItemModel_Previews: PreviewProvider {
     static var previews: some View {
         ToDoListItemModel()

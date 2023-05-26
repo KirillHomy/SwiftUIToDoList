@@ -89,6 +89,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		7F2669FF2A212948006ADDF9 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				7FC461DF2A1A5CF2007A9395 /* HeaderView.swift */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
 		7FC4619A2A1A53B8007A9395 = {
 			isa = PBXGroup;
 			children = (
@@ -149,14 +157,14 @@
 		7FC461BF2A1A575C007A9395 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7FC461C72A1A5902007A9395 /* LoginView.swift */,
+				7FC461C92A1A590D007A9395 /* RegisterView.swift */,
 				7FC461A82A1A53B8007A9395 /* MainView.swift */,
 				7FC461C12A1A5862007A9395 /* ProfileView.swift */,
 				7FC461C32A1A58E4007A9395 /* ToDoListView.swift */,
-				7FC461C52A1A58F2007A9395 /* NewItemView.swift */,
-				7FC461C72A1A5902007A9395 /* LoginView.swift */,
-				7FC461C92A1A590D007A9395 /* RegisterView.swift */,
 				7FC461CB2A1A5928007A9395 /* ToDoListItemView.swift */,
-				7FC461DF2A1A5CF2007A9395 /* HeaderView.swift */,
+				7FC461C52A1A58F2007A9395 /* NewItemView.swift */,
+				7F2669FF2A212948006ADDF9 /* ReusableView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,13 +172,13 @@
 		7FC461C02A1A5761007A9395 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				7FC461D12A1A59A1007A9395 /* MainViewModel.swift */,
-				7FC461D32A1A59AB007A9395 /* ProfileViewModel.swift */,
-				7FC461D52A1A59B8007A9395 /* ToDoListViewModel.swift */,
-				7FC461D72A1A59C4007A9395 /* NewItemViewModel.swift */,
 				7FC461D92A1A59D8007A9395 /* LoginViewModel.swift */,
 				7FC461DB2A1A59E7007A9395 /* RegisterViewModel.swift */,
+				7FC461D12A1A59A1007A9395 /* MainViewModel.swift */,
+				7FC461D52A1A59B8007A9395 /* ToDoListViewModel.swift */,
 				7FC461DD2A1A59F5007A9395 /* ToDoListItemViewModel.swift */,
+				7FC461D72A1A59C4007A9395 /* NewItemViewModel.swift */,
+				7FC461D32A1A59AB007A9395 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

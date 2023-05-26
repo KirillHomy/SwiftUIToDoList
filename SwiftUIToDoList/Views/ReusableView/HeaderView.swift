@@ -9,12 +9,14 @@ import SwiftUI
 
 struct HeaderView: View {
 
-    var title: String
-    var subTitle: String
-    var angel: Double
-    var color: Color
-    var isNavigation: Bool
+    // MARK: - Private(set) variables
+    private(set) var title: String
+    private(set) var subTitle: String
+    private(set) var angel: Double
+    private(set) var color: Color
+    private(set) var isNavigation: Bool
 
+    // MARK: - Body
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: .zero)
@@ -38,6 +40,7 @@ struct HeaderView: View {
     }
 }
 
+// MARK: - PreviewProvider
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         HeaderView(title: "Title",
