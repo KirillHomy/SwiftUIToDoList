@@ -9,7 +9,25 @@ import SwiftUI
 
 class NewItemViewModel: ObservableObject {
 
+    // MARK: - Published
+    @Published var title = ""
+    @Published var dueDate = Date()
+    @Published var showAlert = false
+
     // MARK: - Init
     init() {}
+
+    // MARK: - External Method
+    func save() {
+        //
+    }
+
+    func validateSave() -> Bool {
+        guard title.trimmingCharacters(in: .whitespaces).isNotEmpty() else { return false }
+
+        guard dueDate >= Date().addingTimeInterval(-86400) else { return false }
+
+        return true
+    }
 
 }

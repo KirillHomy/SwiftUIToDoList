@@ -9,6 +9,9 @@ import SwiftUI
 
 class ToDoListViewModel: ObservableObject {
 
+    // MARK: - Published
+    @Published var showingNewItemView = false
+
     // MARK: - Init
     init() {}
 

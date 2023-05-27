@@ -27,13 +27,15 @@ struct ToDoListView: View {
                 
             }
             .navigationTitle("To Do List")
-            .toolbar {
+            .toolbar { 
                 Button {
-                    // Action
+                    toDoListViewModel.showingNewItemView = true
                 } label: {
                     Image(systemName: "plus")
                 }
-
+            }
+            .sheet(isPresented: $toDoListViewModel.showingNewItemView) {
+                NewItemView(newItemPresented: $toDoListViewModel.showingNewItemView)
             }
         }
     }
