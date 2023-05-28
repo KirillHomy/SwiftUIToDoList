@@ -7,18 +7,16 @@
 
 import SwiftUI
 
-struct ToDoListItemModel: View {
+struct ToDoListItemModel: Codable, Identifiable {
 
-    // MARK: - Body
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    let id: String
+    let title: String
+    let dieDate: TimeInterval
+    let createDate: TimeInterval
+    var isDone: Bool
+
+    mutating func setDone(_ state: Bool) {
+        isDone = state
     }
 
-}
-
-// MARK: - PreviewProvider
-struct ToDoListItemModel_Previews: PreviewProvider {
-    static var previews: some View {
-        ToDoListItemModel()
-    }
 }

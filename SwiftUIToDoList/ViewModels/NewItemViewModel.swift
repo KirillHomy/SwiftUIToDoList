@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 class NewItemViewModel: ObservableObject {
 
@@ -19,7 +21,25 @@ class NewItemViewModel: ObservableObject {
 
     // MARK: - External Method
     func save() {
-        //
+        guard validateSave() else { return }
+
+        // Get current user ID
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        // Create model
+        let newId = UUID().uuidString
+        let newItem = ToDoListItemModel(id: newId,
+                                        title: title,
+                                        dieDate: dueDate.timeIntervalSince1970,
+                                        createDate: Date().timeIntervalSince1970,
+                                        isDone: false)
+        // Save model
+        let db = Firestore.firestore()
+
+        db.collection("Users")
+            .document(userId)
+            .collection("ToDoList")
+            .document(newId)
+            .setData(newItem.asDictionary())
     }
 
     func validateSave() -> Bool {
