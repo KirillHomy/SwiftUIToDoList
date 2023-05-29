@@ -35,6 +35,7 @@
 		7FC461DE2A1A59F5007A9395 /* ToDoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC461DD2A1A59F5007A9395 /* ToDoListItemViewModel.swift */; };
 		7FC461E02A1A5CF2007A9395 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC461DF2A1A5CF2007A9395 /* HeaderView.swift */; };
 		7FC461E32A1A68DD007A9395 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC461E22A1A68DD007A9395 /* CustomTextFieldStyle.swift */; };
+		7FF76B9F2A251C6E0047F4CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF76B9E2A251C6E0047F4CC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		7FC461DD2A1A59F5007A9395 /* ToDoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewModel.swift; sourceTree = "<group>"; };
 		7FC461DF2A1A5CF2007A9395 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		7FC461E22A1A68DD007A9395 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
+		7FF76B9E2A251C6E0047F4CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		7FC461A52A1A53B8007A9395 /* SwiftUIToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				7FF76B9D2A251C5F0047F4CC /* Constans */,
 				7F2669EF2A1E86F4006ADDF9 /* Extension */,
 				7FC461E12A1A68C8007A9395 /* Custom */,
 				7FC461BD2A1A573F007A9395 /* Application */,
@@ -190,6 +193,14 @@
 				7F2669E12A1D2EEE006ADDF9 /* CustomButton.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		7FF76B9D2A251C5F0047F4CC /* Constans */ = {
+			isa = PBXGroup;
+			children = (
+				7FF76B9E2A251C6E0047F4CC /* Constants.swift */,
+			);
+			path = Constans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				7F2669FE2A1FCF77006ADDF9 /* Encodable+Ext.swift in Sources */,
 				7FC461A92A1A53B8007A9395 /* MainView.swift in Sources */,
 				7F2669E22A1D2EEE006ADDF9 /* CustomButton.swift in Sources */,
+				7FF76B9F2A251C6E0047F4CC /* Constants.swift in Sources */,
 				7FC461DC2A1A59E7007A9395 /* RegisterViewModel.swift in Sources */,
 				7FC461C22A1A5862007A9395 /* ProfileView.swift in Sources */,
 				7FC461CA2A1A590D007A9395 /* RegisterView.swift in Sources */,

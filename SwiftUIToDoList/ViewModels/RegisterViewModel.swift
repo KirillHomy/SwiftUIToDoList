@@ -55,7 +55,7 @@ private extension RegisterViewModel {
                                 joined: Date().timeIntervalSince1970)
 
         let db = Firestore.firestore()
-        db.collection("Users")
+        db.collection(Constants.users.rawValue)
             .document(id)
             .setData(newUser.asDictionary())
     }

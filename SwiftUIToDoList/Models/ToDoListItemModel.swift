@@ -11,7 +11,7 @@ struct ToDoListItemModel: Codable, Identifiable {
 
     let id: String
     let title: String
-    let dieDate: TimeInterval
+    let dueDate: TimeInterval
     let createDate: TimeInterval
     var isDone: Bool
 

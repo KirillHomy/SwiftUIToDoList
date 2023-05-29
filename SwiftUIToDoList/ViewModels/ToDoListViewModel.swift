@@ -15,4 +15,8 @@ class ToDoListViewModel: ObservableObject {
     // MARK: - Init
     init() {}
 
+    // MARK: - External Method
+    func delete(_ id: String) {
+        
+    }
 }

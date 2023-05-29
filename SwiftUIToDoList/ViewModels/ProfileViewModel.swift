@@ -12,5 +12,9 @@ class ProfileViewModel: ObservableObject {
     // MARK: - Init
     init() {}
 
+    // MARK: - External Method
+    func toggleIsDone(_ item: ToDoListItemModel) {
+        
+    }
 }
 

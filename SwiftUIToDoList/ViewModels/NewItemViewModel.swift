@@ -29,15 +29,15 @@ class NewItemViewModel: ObservableObject {
         let newId = UUID().uuidString
         let newItem = ToDoListItemModel(id: newId,
                                         title: title,
-                                        dieDate: dueDate.timeIntervalSince1970,
+                                        dueDate: dueDate.timeIntervalSince1970,
                                         createDate: Date().timeIntervalSince1970,
                                         isDone: false)
         // Save model
         let db = Firestore.firestore()
 
-        db.collection("Users")
+        db.collection(Constants.users.rawValue)
             .document(userId)
-            .collection("ToDoList")
+            .collection(Constants.todolist.rawValue)
             .document(newId)
             .setData(newItem.asDictionary())
     }
