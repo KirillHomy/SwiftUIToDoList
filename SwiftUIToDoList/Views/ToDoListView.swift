@@ -14,13 +14,16 @@ struct ToDoListView: View {
     private var userId = ""
 
     // MARK: - StateObject
-    @StateObject var toDoListViewModel = ToDoListViewModel()
+    @StateObject var toDoListViewModel: ToDoListViewModel
+
+    // MARK: - FirestoreQuery
     @FirestoreQuery var toDoListItemModels: [ToDoListItemModel]
 
     // MARK: - Init
     init(userId: String) {
         self.userId = userId
         self._toDoListItemModels = FirestoreQuery(collectionPath: "\(Constants.users.rawValue)/\(userId)/\(Constants.todolist.rawValue)")
+        self._toDoListViewModel = StateObject(wrappedValue: ToDoListViewModel(userID: userId))
     }
 
     // MARK: - Body
