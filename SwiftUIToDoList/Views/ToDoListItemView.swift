@@ -36,9 +36,11 @@ struct ToDoListItemView: View {
                 profileViewModel.toggleIsDone(item)
             } label: {
                 Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
+                    .imageScale(.large)
+                    .foregroundColor(item.isDone ? .green : .red)
             }
-
         }
+        .frame(height: 50.0)
     }
 }
 

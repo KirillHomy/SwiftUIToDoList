@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 class ProfileViewModel: ObservableObject {
 
@@ -14,7 +16,18 @@ class ProfileViewModel: ObservableObject {
 
     // MARK: - External Method
     func toggleIsDone(_ item: ToDoListItemModel) {
-        
+        var copyItem = item
+        copyItem.setDone(!item.isDone)
+
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+
+        let db = Firestore.firestore()
+
+        db.collection(Constants.users.rawValue)
+            .document(userId)
+            .collection(Constants.todolist.rawValue)
+            .document(copyItem.id)
+            .setData(copyItem.asDictionary())
     }
 }
 

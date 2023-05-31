@@ -12,6 +12,7 @@ struct ToDoListView: View {
 
     // MARK: - Private variables
     private var userId = ""
+    private var margin = 50.0
 
     // MARK: - StateObject
     @StateObject var toDoListViewModel: ToDoListViewModel
@@ -38,8 +39,9 @@ struct ToDoListView: View {
                             }
                             .tint(.red)
                         }
+                        .listRowSeparator(.hidden)
                 }
-                .listStyle(PlainListStyle())
+                .listStyle(.plain)
             }
             .navigationTitle("To Do List")
             .toolbar { 
