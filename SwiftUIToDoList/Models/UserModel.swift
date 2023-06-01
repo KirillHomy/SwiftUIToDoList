@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+enum UserModelValue: String {
+    case id
+    case name
+    case email
+    case joined
+}
+
 struct UserModel: Codable {
     let id: String
     let name: String

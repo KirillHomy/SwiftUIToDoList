@@ -17,11 +17,10 @@ class MainViewModel: ObservableObject {
     // MARK: - Init
     init() {
         self.handler = Auth.auth().addStateDidChangeListener { [weak self] _, user in
-            guard let sSelf = self,
-                  let user = user else { return }
+            guard let sSelf = self else { return }
 
             DispatchQueue.main.async {
-                sSelf.currentUserId = user.uid
+                sSelf.currentUserId = user?.uid ?? ""
             }
         }
     }

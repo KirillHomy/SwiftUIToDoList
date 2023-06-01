@@ -18,7 +18,7 @@ struct ToDoListItemView: View {
     }
 
     // MARK: - StateObject
-    @StateObject var profileViewModel = ProfileViewModel()
+    @StateObject var toDoListItemViewModel = ToDoListItemViewModel()
 
     // MARK: - Body
     var body: some View {
@@ -33,7 +33,7 @@ struct ToDoListItemView: View {
             }
             Spacer()
             Button {
-                profileViewModel.toggleIsDone(item)
+                toDoListItemViewModel.toggleIsDone(item)
             } label: {
                 Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
                     .imageScale(.large)
