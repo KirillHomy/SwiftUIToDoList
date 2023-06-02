@@ -41,6 +41,11 @@ private extension LoginViewModel {
             errorMessage = "Please enter valid email."
             return false
         }
+        guard password.count >= 6 else {
+            errorMessage = "Please enter a password greater than six characters."
+            return false
+        }
+
         return true
     }
 

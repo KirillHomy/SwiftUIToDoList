@@ -40,6 +40,7 @@ struct ToDoListView: View {
                             .tint(.red)
                         }
                         .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
                 }
                 .listStyle(.plain)
             }

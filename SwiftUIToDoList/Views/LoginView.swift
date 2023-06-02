@@ -40,6 +40,8 @@ struct LoginView: View {
                             .foregroundColor(.red)
                             .background(Color.black)
                             .cornerRadius(10.0)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.center)
                     }
                 }
                 .frame(width: UIScreen.main.bounds.width - 32.0)
